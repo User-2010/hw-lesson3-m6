@@ -1,11 +1,15 @@
-import { Header } from "../widgets/Header";
+import { AppRouter } from "./router/AppRouter";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./styles/global.scss";
 
 const App = () => {
-    return <div>App
+    const queryClient = new QueryClient();
 
-      <Header/>
-    </div>;
+    return (
+        <QueryClientProvider client={queryClient}>
+            <AppRouter />
+        </QueryClientProvider>
+    );
 };
 
 export default App;
