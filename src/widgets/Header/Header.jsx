@@ -1,13 +1,17 @@
+
 import { NavLink } from "react-router-dom";
 import { useCategories } from "./Header.api";
 import s from "./Header.module.scss";
 
 const renderCategoryLink = (name) => {
     const toCategory = `/category/${name}`;
+
     return (
-        <NavLink key={name} to={toCategory}>
-            {name}
-        </NavLink>
+        <li className={s.item} key={name}>
+            <NavLink to={toCategory}>
+                {name}
+            </NavLink>
+        </li>
     );
 };
 
@@ -17,10 +21,21 @@ export const Header = () => {
     return (
         <header className={s.header}>
             <div className={s.wrapper}>
-                <h2 className={s.title}>SHOP.CO</h2>
+                <NavLink to="/" className={s.title}>
+                    SHOP.CO
+                </NavLink>
             </div>
+
             <nav className={s.nav}>
                 <ul className={s.list}>
+                    <li className={s.item}>
+                        <NavLink to="/">Main Page</NavLink>
+                    </li>
+
+                    <li className={s.item}>
+                        <NavLink to="/cart">Cart</NavLink>
+                    </li>
+
                     {categories?.map(renderCategoryLink)}
                 </ul>
             </nav>
