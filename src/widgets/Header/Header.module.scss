@@ -1,0 +1,53 @@
+.header {
+  border-bottom: 1px solid var(--color-border);
+  padding: 20px 0;
+  margin-bottom: 40px;
+}
+
+.wrapper {
+  max-width: 1239px;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--color-black);
+  letter-spacing: 1px;
+}
+
+.nav {
+  max-width: 1239px;
+  margin: 15px auto 0;
+  padding: 0 20px;
+}
+
+.list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+
+  // Стили для ссылок категорий в хедере
+  a {
+    text-decoration: none; // Убирает подчеркивание
+    color: var(--color-gray); // Цвет неактивных ссылок
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: capitalize; // Делает первую букву заглавной (например, electronics -> Electronics)
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--color-black);
+    }
+
+    // Активная ссылка (когда пользователь находится на этой странице)
+    &.active {
+      color: var(--color-black);
+      font-weight: 700;
+    }
+  }
+}

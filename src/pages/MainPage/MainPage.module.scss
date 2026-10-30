@@ -1,0 +1,35 @@
+.main {
+  padding: 40px 0;
+}
+
+.banner {
+  background-color: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    max-width: 500px;
+    line-height: 1.1;
+    color: var(--color-black);
+  }
+
+  p {
+    color: var(--color-gray);
+    margin-top: 15px;
+    max-width: 480px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+
+.heading {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  text-align: center;
+  text-transform: uppercase;
+}

@@ -17,3 +17,14 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
+
+.container{
+    max-width: 1239px;
+    margin-inline: auto;
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
